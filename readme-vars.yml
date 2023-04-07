@@ -101,6 +101,14 @@ app_setup_block: |
   
   The path to wkhtmltopdf in this image to include in your .env file is `/usr/bin/wkhtmltopdf`.
 
+  #### Different paths for secure images
+  This docker image exposes the internal BookStack folders under different paths. Below is the current mapping:
+  
+  Location within mounted /config folder => Normal BookStack filesystem location
+  - www/files => storage/uploads/files
+  - www/images => storage/uploads/images
+  - www/themes => themes
+  - uploads => public/uploads
 
 # changelog
 changelogs:

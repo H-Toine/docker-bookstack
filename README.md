@@ -83,6 +83,15 @@ When you create the container, do not set any arguments for any SQL settings. Th
 
 The path to wkhtmltopdf in this image to include in your .env file is `/usr/bin/wkhtmltopdf`.
 
+#### Different paths for secure images
+This docker image exposes the internal BookStack folders under different paths. Below is the current mapping:
+
+Location within mounted /config folder => Normal BookStack filesystem location
+- www/files => storage/uploads/files
+- www/images => storage/uploads/images
+- www/themes => themes
+- uploads => public/uploads
+
 ## Usage
 
 Here are some example snippets to help you get started creating a container.
